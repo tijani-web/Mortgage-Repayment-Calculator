@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mortgage Repayment Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="calculator box" id="box">
+            <div class="calc-info">
+                <div class="top-header">
+                    <h1>Mortgage Calculator</h1>
+                    <p><a href="" id="clear">Clear All</a></p>
+                </div>
+                <div class="calc-form">
+                    <form action="" id="form">
+                        <label for="">Mortage Amount</label>
+                        <div class="input-wrapper">
+                            <span class="icon">€</span>
+                            <input type="text" placeholder="" id="mortgageAmount" />
+                        </div>
+                        <p id="error" class="error">This field is required</p>
+                        
+                        <section class="sec-1">
+                
+                                <div class="con">
+                                    <div class="inner">
+                                        <label for="">Mortage Term</label>
+                                        <div class="input-wraper">
+                                            <input type="text" placeholder="" id="mortgageTerm"/>
+                                            <span class="icon">Years</span>
+                                        </div>
+                                       <p id="error" class="error">This field is required</p>
+
+                                    </div>
+                                    
+                                    <div class="inner">
+                                        <label for="">Interest Rate</label>
+                                        <div class="input-wraper">
+                                            <input type="text" placeholder="" id="mortgageRate"/>
+                                            <span class="icon">%</span>
+                                        </div>
+                                       <p id="error" class="error">This field is required</p>
+
+                                    </div>
+                                </div>          
+                        </section> 
+                        <div class="radio-info">
+                            <label for="">Mortage Type</label>
+                            <div class="radio-group">
+                                <label class="radio-option">
+                                  <input type="radio" name="repayment-type" checked />
+                                  <span class="radio-text">Repayment</span>
+                                </label>
+                              
+                                <label class="radio-option">
+                                  <input type="radio" name="repayment-type" />
+                                  <span class="radio-text">Interest Only</span>
+                                </label>
+                              </div>
+                              <p id="error" class="error">This field is required</p>
+
+                        </div>
+                    
+                            <button type="submit" class="calculate-btn" id="btn">
+                                <img src="mortgage-repayment-calculator-main/assets/images/icon-calculator.svg" alt="">
+                              <span>Calculate</span>
+                            </button>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="result box">
+            <div class="result-info" id="resultInfo">
+                <div class="result-flex">
+                    <div class="info-con">
+                        <img src="mortgage-repayment-calculator-main/assets/images/illustration-empty.svg" alt="">
+                        <div class="result-text">
+                            <h1>Result shown here</h1>
+                            <p>Complete the form and click “calculate repayments” to see what 
+                            your monthly repayments would be.
+                          </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="final-result" id="finalResult">
+                <div class="final-text">
+                    <h1>Your results</h1>
+                    <p> Your results are shown below based on the information you provided. 
+                      To adjust the results, edit the form and click “calculate repayments” again.</p>
+                </div>
+                <div class="final-box">
+                    <div class="monthly-payment">
+                        <p>Your monthly repayments</p>
+                        <h1 id="monthlyAmount"></h1>
+                    </div>
+                    <div class="term-payment">
+                        <p>Total you'll pay over the term</p>
+                        <h2 id="termAmount"></h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+      <script src="index.js"></script>
+</body>
+</html>
